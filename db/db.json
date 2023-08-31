@@ -90,16 +90,6 @@
       "id": 1
     },
     {
-      "nome": "as",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
       "nome": "sad",
       "carne": "Maminha",
       "pao": "3 Queijos",
