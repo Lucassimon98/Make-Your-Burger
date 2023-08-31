@@ -18,7 +18,7 @@ export default {
       logo_src: "/img/logo.png",
       alt_descr: "Make Your Burger"
     }
-  }
+  },
 }
 </script>
 

@@ -1,5 +1,7 @@
 # make-your-burger
 
+Criado o projeto com base no curso do Youtube do Matheus Bastistti, modificações após o termino: Ainda estou fazendo, como conectar a um banco de dados, vou usar o do XAMPP e criar autenticação de usuários.
+
 ## Project setup
 ```
 npm install
@@ -9,11 +11,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

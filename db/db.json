@@ -79,22 +79,13 @@
   ],
   "burgers": [
     {
-      "nome": "as",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
+      "nome": "Nathalia",
+      "carne": "Veggie burger",
+      "pao": "Integral",
       "opcionais": [
-        "Bacon",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "sad",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
+        "Tomate",
+        "Pepino",
+        "Cebola roxa"
       ],
       "status": "Em produção",
       "id": 3
