@@ -20,8 +20,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
+    align-self: flex-end;
     width: 100%;
 }
 </style>
