@@ -1,18 +1,25 @@
-<template>
+<template> 
   <Navbar :logo="logo_src" :alt="alt_descr" />
   <router-view/>
   <Footer />
 </template>
 
 <script>
+
+//Tag Template é dentro dela que definimos noss corpo da página
+// Estou definindo nele o NavBar importado abaixo e o footer
+//na parte de Router-view é o corpo de tudo o resto
+
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
 
 export default {
+  //aqui colocamos os componentes importados para dizer o que o sistema tem que usar
   components: {
     Navbar,
     Footer
   },
+  //data é o local onde colocamos todos os dados dinamicos da página
   data() {
     return {
       logo_src: "/img/logo.png",

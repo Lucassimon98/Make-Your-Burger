@@ -6,6 +6,7 @@
 
 
 <script>
+//footer da aplicação
 export default {
     name: 'Footer'
 }

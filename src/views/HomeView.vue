@@ -13,6 +13,7 @@
   <script>
   
   export default {
+    //definição do nome da view
     name: 'Home',
   }
   

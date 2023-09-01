@@ -11,6 +11,9 @@ import Banner from '../components/Banner.vue';
 import BurgerForm from '@/components/BurgerForm.vue';
 
 export default {
+
+// definição do nome e do componente usado
+
   name: 'CriarPedido',
   components: {
     Banner,

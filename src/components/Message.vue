@@ -5,6 +5,9 @@
 </template>
 
 <script>
+
+// aqui recebemos o props de msg, ele é passado onde o componente é chamado
+
 export default {
     name: "Message",
     props: {

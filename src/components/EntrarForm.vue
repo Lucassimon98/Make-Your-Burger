@@ -20,41 +20,45 @@
 </template>
 
 <script>
+
+//Aqui usamos o componente mensagem recebido em data
+
 import Message from './Message.vue';
 export default {
     name: 'EntrarForm',
+    //na parte de data informamos todos os valores dinamicos da aplicação
     data(){
         return {
             email: null,
             senha: null,
             msg: null
         }
-    },
+    },//Aqui são os componentes usados na aplicação
     components: {
         Message
-    },
+    },//Aqui é criado os metodos ou funções
     methods: {
         async entrarUser() {
 
-            const req = await fetch("http://localhost:3000/usuario");
-            const data = await req.json();
+            const req = await fetch("http://localhost:3000/usuario");//aqui é a request para o banco
+            const data = await req.json();//aqui recebemos a request e passamos o json para a const data
             
-            const dataES = {
+            const dataES = { //aqui eu criei a const dataES para receber os valores do que foi definico que vem do front
                 email: this.email,
                 senha: this.senha
             }
             
-            let bEmail = false;
+            let bEmail = false;//criação de variaveis
             let bSenha = false;
 
-            data.forEach(email => {
+            data.forEach(email => { //aqui eu pego informações do email que vem do banco e verifico com as do sistema para retornar um boolean
                 if(email.email == dataES.email) {
                     bEmail = true
                 } else {
                     bEmail = false
                 }
             });
-            data.forEach(senha => {
+            data.forEach(senha => {//aqui eu pego informações do email que vem do banco e verifico com as do sistema para retornar um boolean
                 if(senha.senha == dataES.senha) {
                     bSenha = true
                 } else {
@@ -62,14 +66,14 @@ export default {
                 }
             });
 
-            if(bEmail != false && bSenha != false) {
+            if(bEmail != false && bSenha != false) {//os booleans retornados passam por essa verificação para autorizar ou não o acesso.
                 window.location = "/criar-pedidos"
             } else {
                 window.location = "/entrar"
             }
         },
     }, 
-    mounted() {
+    mounted() {//aqui faz parte do lyfecicle da aplicação onde posso definir funções para iniciar junto com a aplicação
     }
 }
 </script>

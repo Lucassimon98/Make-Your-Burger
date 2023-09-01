@@ -34,7 +34,7 @@ export default {
     components: {
         Message
     },
-    data(){
+    data(){//todas as informações dinamicas da aplicação
         return {
             nome: null,
             sobrenome: null,
@@ -43,20 +43,20 @@ export default {
             msg: null
         }
     },
-    methods: {
-        async createUser(e) {
+    methods: { //funções ficam nessa parte
+        async createUser(e) { //aqui criamos o usuario assim qu eo formulario sofre um @submit
             e.preventDefault()
 
-            const data = {
+            const data = { //passando para a const data
                 nome: this.nome,
                 sobrenome: this.sobrenome,
                 email: this.email,
                 senha: this.senha
             }
 
-            const dataJson = JSON.stringify(data);
+            const dataJson = JSON.stringify(data); //transformando em JSON
 
-            const req = await fetch("http://localhost:3000/usuario", {
+            const req = await fetch("http://localhost:3000/usuario", { //enviando para o banco como json
                 method: "POST",
                 headers: { "Content-type": "application/json"},
                 body: dataJson

@@ -10,6 +10,9 @@
 </template>
 
 <script>
+
+//Aqui é o NavBar da aplicação onde é definidos os linkes e recebemos nesse componente props, que vem lá do App.vue
+
 export default {
     name: "Navbar",
     props: ["logo", "alt"]

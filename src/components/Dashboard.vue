@@ -35,8 +35,8 @@
 
 <script>
 export default {
-    name: "Dashboard",
-    data() {
+    name: "Dashboard",//definindo o nome do componente
+    data() { //todas as informações dinamicas e que vem do BD
         return {
             burgers: null,
             burgers_id: null,
@@ -44,7 +44,7 @@ export default {
         }
     },
     methods: {
-        async getPedidos() {
+        async getPedidos() { //aqui busca no banco de dados os burger e devolve na variavél de data()
             const req = await fetch("http://localhost:3000/burgers");
             const data = await req.json();
 
@@ -52,29 +52,29 @@ export default {
 
             this.getStatus();
         },
-        async getStatus() {
+        async getStatus() { //aqui recuperamos o status
             const req = await fetch("http://localhost:3000/status");
             const data = await req.json();
 
             this.status = data;
         },
-        async deleteBurger(id) {
+        async deleteBurger(id) { //função para deletar
             const req = await fetch("http://localhost:3000/burgers/"+id, {
-                method: "DELETE"
+                method: "DELETE" //metodo de deletar é DELETE
             });
             const res = await req.json();
 
             //msg
 
-            this.getPedidos();
+            this.getPedidos(); //aqui chamamos a primeira função para atualizar a lista
         },
-        async updateBurger(event, id) {
+        async updateBurger(event, id) { //função para atualizar informações
             const option = event.target.value;
 
-            const dataJson = JSON.stringify({ status: option});
+            const dataJson = JSON.stringify({ status: option}); //stringify é para transformar a const em json
 
             const req = await fetch("http://localhost:3000/burgers/"+id, {
-                method: "PATCH",
+                method: "PATCH", //methodo aqui é PATCH
                 headers: {"Content-Type": "application/json"},
                 body: dataJson
             });
@@ -82,7 +82,7 @@ export default {
             const res = await req.json();
         }
     },
-    mounted() {
+    mounted() { //Definimos aqui tudo que faz parte do lyfecicle, ao iniciar a aplicação vai ser carregada a função abaixo
         this.getPedidos();
     }
 }

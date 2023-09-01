@@ -7,7 +7,7 @@
   
   <script>
   import CadastrarForm from '@/components/CadastrarForm.vue';
-  
+  // definição do nome e do componente usado
   export default {
     name: 'Cadastrar',
     components: {

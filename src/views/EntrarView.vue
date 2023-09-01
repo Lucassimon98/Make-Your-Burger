@@ -9,6 +9,7 @@
   import EntrarForm from '@/components/EntrarForm.vue';
   
   export default {
+    // definição do nome e do componente usado
     name: 'Entrar',
     components: {
         EntrarForm
