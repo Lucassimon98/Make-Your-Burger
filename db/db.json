@@ -79,16 +79,24 @@
   ],
   "burgers": [
     {
-      "nome": "Nathalia",
-      "carne": "Veggie burger",
-      "pao": "Integral",
+      "nome": "Lucas Henrique Simon adsada",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
       "opcionais": [
-        "Tomate",
-        "Pepino",
-        "Cebola roxa"
+        "Bacon",
+        "Tomate"
       ],
-      "status": "Em produção",
-      "id": 3
+      "status": "Solicitado",
+      "id": 4
+    }
+  ],
+  "usuario": [
+    {
+      "nome": "lucas",
+      "sobrenome": "Simon",
+      "email": "lucas@gmail.com",
+      "senha": "123",
+      "id": 1
     }
   ]
 }
